@@ -1,0 +1,449 @@
+body{
+  height: 200vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.body__dark{
+background-color:rgb(100, 100, 100);
+}
+
+.header {
+  padding: 40px 15%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #413949;
+}
+.about{padding: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.header_logo a {
+  text-decoration: none;
+  color: #f8f9f6;
+
+  transition: all .2s ease-in-out;
+}
+
+.menu {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.menu-item:hover a{
+  color: rgba(255, 255, 255, 0.692);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+.leftcol {
+  width: 110px;
+  vertical-align: top;
+}
+
+
+.main-photo {
+  float: left;
+}
+
+
+.about {
+  font-size: 15px;
+  line-height: 20px;
+  color: #030305;
+  text-align: center;
+}
+
+
+.tables_title{
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+
+.btn-up{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: white;
+  background-image: url('https://img.icons8.com/?size=512&id=9149&format=png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  filter: invert(100%);
+  transform: rotateZ(90deg);
+}
+
+.btn-up-hide{
+  display: none;
+}
+
+
+
+.main {
+  display: flex;
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 60px;
+}
+
+aside{
+  padding-top: 150px;
+}
+
+aside ul{
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+aside li{
+  width: fit-content;
+  color: black;
+}
+
+aside li:hover{
+  color: rgb(84, 84, 84);
+}
+
+
+
+.section-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.section{
+  padding-top: 150px;
+}
+
+.category-title{
+  font-size: 24px;
+  font-size: normal;
+  font-weight: 600;
+  font-family: sans-serif;
+
+  display: block;
+  width: 100%;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.category-title__dark{
+  color: white;
+}
+
+.category{
+  width: 960px;
+
+  margin: 0 auto;
+  margin-top: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+}
+
+.category-item{
+  width: 300px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding: 10px 20px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0px 0px 10px rgba(146, 146, 146, 0.514);
+}
+
+.category-item__dark{
+  background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+
+.category-image{
+  width: 100%;
+  height: 180px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.form-container{
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: #dededecd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+.form-container__hide{
+  display: none;
+}
+
+.form{
+  width: 800px;
+  height: fit-content;
+
+  padding: 40px 60px;
+
+  background-color: white;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 20px;
+  /* align-items: center; */
+}
+
+label{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.group_input{
+  display: block;
+}
+
+.group_input:has(textarea){
+  display: block;
+}
+
+.group_input input, .group_input textarea{
+  border: 1px solid black;
+}
+
+.color-par{
+  display: inline-block;
+  width: fit-content;
+
+
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+input[type="radio"] + label{
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+
+  box-sizing: border-box;
+}
+
+input[type="radio"]#radio_beige + label{
+  background-color: #d8ccc1;
+}
+
+input[type="radio"]#radio_black + label{
+  background-color: #7f7779;
+}
+
+input[type="radio"]#radio_yellow + label{
+  background-color: #d4c369;
+}
+
+input[type="radio"]#radio_red + label{
+  background-color: #8f1d1d;
+}
+input[type="radio"]:checked + label{
+  border: 4px solid #3b3630;
+
+  box-sizing: border-box;
+}
+
+
+textarea{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+.group_btns{
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn{
+  display: block;
+  padding: 8px 22px;
+
+  border: 3px solid black;
+  border-radius: 18px;
+}
+
+.btn_black{
+  color: white;
+  background-color: black;
+}
+
+
+footer{
+
+  margin-top: 70px;
+
+
+  border-top: 1px solid black;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 0px;
+}
+
+footer ul{
+  display: flex;
+  gap: 40px;
+}
+
+footer li{
+  width: fit-content;
+  color: black;
+}
+
+footer li:hover{
+  color: rgb(84, 84, 84);
+}
+
+
+.link_cat__dark{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+input[type="checkbox"] + label{
+  display: block;
+
+  width: 40px;
+  height: 20px;
+
+  background-color: white;
+  border-radius: 20px;
+
+  position: relative;
+
+  border: none;
+
+  transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"] + label::before{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  width: 16px;
+  height: 16px;
+
+  content: "";
+
+  background-color: black;
+  border-radius: 50%;
+
+
+  transition: all .2s ease-in-out;
+}
+
+
+input[type="checkbox"]:checked + label{
+  background-color: black;
+  border: none;
+}
+
+input[type="checkbox"]:checked + label::before{
+  background-color: white;
+  top: 2px;
+  right: 2px;
+  left: auto;
+}

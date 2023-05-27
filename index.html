@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/pngwing.com.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Угол.ру</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="header_logo">
+                <a href="/index.html">Угол.ру</a>
+            </div>
+            <ul class="menu">
+                <li class="menu-item"><a href="#section_table">Столы</a></li>
+                <li class="menu-item"><a href="#section_chair">Стулья</a></li>
+                <li class="menu-item"><a href="#section_sofa">Диваны</a></li>
+            </ul>
+
+            <script>
+                function handleDark(event) {
+                    const cards = document.querySelectorAll('.category-item'),
+                        body = document.getElementsByTagName('body'),
+                        titles = document.querySelectorAll('.category-title'),
+                        links = document.querySelectorAll('.link_cat')
+
+                    for (let item of cards) {
+                        item.classList.toggle('category-item__dark')
+                    }
+
+                    for (let item of titles) {
+                        item.classList.toggle('category-title__dark')
+                    }
+
+                    for (let item of links) {
+                        item.classList.toggle('link_cat__dark')
+                    }
+
+                    body[0].classList.toggle('body__dark');
+                }
+            </script>
+
+            <div class="toggleBtn">
+                <input type="checkbox" id="toggle" name="toggle" onclick="handleDark(event)">
+                <label for="toggle"></label>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <aside>
+            <h2 class="category-title">Категории</h2>
+            <ul>
+                <li><a class="link_cat" href="#section_sofa">Диваны</a></li>
+                <li><a class="link_cat" href="#section_chair">Стулья</a></li>
+                <li><a class="link_cat" href="#section_table">Столы</a></li>
+            </ul>
+        </aside>
+        <div class="section-container">
+            <section class="section" id="section_sofa">
+                <h2 class="category-title">Диваны</h2>
+                <ul class="category" id="sofa"></ul>
+            </section>
+
+            <section class="section" id="section_chair">
+                <h2 class="category-title">Стулья</h2>
+                <ul class="category" id="chair"></ul>
+            </section>
+
+            <section class="section" id="section_table">
+                <h2 class="category-title">Столы</h2>
+                <ul class="category" id="table"></ul>
+            </section>
+        </div>
+    </main>
+
+
+    <footer>
+        <ul>
+            <li><a class="link_cat" href="#section_sofa">Диваны</a></li>
+            <li><a class="link_cat" href="#section_chair">Стулья</a></li>
+            <li><a class="link_cat" href="#section_table">Столы</a></li>
+        </ul>
+    </footer>
+
+
+
+    <!-- Form  -->
+    <script>
+        function handleForm(event) {
+            let form = document.getElementById('form_container');
+            form.classList.toggle('form-container__hide');
+        }
+
+
+        function handleSumbit(event) {
+            alert('Вы успешно купили товар!');
+        }
+    </script>
+
+    <div id="form_container" class="form-container form-container__hide">
+        <form class="form" onsubmit="handleSumbit(event)">
+
+            <div class="group_input">
+                <label for="amount">Введите количество товаров: </label>
+                <input type="number" name="amount" id="amount" value="1" min="0" max="100">
+            </div>
+
+            <div class="group_input">
+                <p class="color-par">Цвет: </p>
+
+                <input type="radio" name="radio" id="radio_beige" checked>
+                <label for="radio_beige"></label>
+
+                <input type="radio" name="radio" id="radio_black">
+                <label for="radio_black"></label>
+
+                <input type="radio" name="radio" id="radio_yellow">
+                <label for="radio_yellow"></label>
+
+                <input type="radio" name="radio" id="radio_red">
+                <label for="radio_red"></label>
+
+            </div>
+
+            <div class="group_input">
+                <label for="comment">Комментарий</label>
+                <textarea name="comment" id="comment" cols="40" rows="15"></textarea>
+            </div>
+
+            <div class="group_btns">
+                <button class="btn btn_black">Купить</button>
+                <input class="btn btn_white" type="button" name="close" id="close" value="Закрыть"
+                    onclick="handleForm(event)">
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <div class="btn-up btn-up-hide"></div>
+
+
+
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+
+</html>
